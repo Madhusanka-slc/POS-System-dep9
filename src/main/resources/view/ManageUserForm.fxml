@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="689.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ManageUserFormController">
+   <children>
+      <JFXButton fx:id="btnAdd" layoutX="703.0" layoutY="185.0" onAction="#btnAddOnAction" prefHeight="33.0" prefWidth="128.0" style="-fx-background-color: blue;" text="Add User">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <VBox layoutX="200.0" layoutY="134.0" spacing="10.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label prefHeight="33.0" prefWidth="165.0" text="Name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtName" prefHeight="33.0" prefWidth="306.0" promptText="Ex: Saman Kumara">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label prefHeight="41.0" prefWidth="164.0" text="Password">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtPassword" prefHeight="11.0" prefWidth="307.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="229.0" layoutY="23.0" prefHeight="50.0" prefWidth="296.0" text="Manage User " AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="Cantarell Extra Bold" size="35.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblUse" layoutX="46.0" layoutY="282.0" prefHeight="308.0" prefWidth="821.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <columns>
+          <TableColumn prefWidth="374.0" text="Name" />
+          <TableColumn prefWidth="446.0" text="Password" />
+        </columns>
+      </TableView>
+      <HBox layoutX="65.0" layoutY="625.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="txtSearch" onAction="#txtSearchOnAction" prefHeight="37.0" prefWidth="289.0" promptText="Search ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
